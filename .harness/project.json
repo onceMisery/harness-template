@@ -1,0 +1,17 @@
+{
+  "project_name": "sample-project",
+  "project_type": "fullstack",
+  "delivery_mode": "incremental",
+  "stack": ["typescript", "react", "node", "postgres"],
+  "modules": ["web", "backend"],
+  "quality_gate": {
+    "min_eval_score": 80,
+    "blocker_allowed": 0,
+    "max_rework_rounds_per_sprint": 3
+  },
+  "entrypoints": {
+    "planner": ".agents/planner.md",
+    "generator": ".agents/generator.md",
+    "evaluator": ".agents/evaluator.md"
+  }
+}

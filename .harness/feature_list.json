@@ -1,0 +1,46 @@
+[
+  {
+    "id": "FEAT-001",
+    "name": "Create order",
+    "module": "backend",
+    "type": "backend_api",
+    "priority": "P0",
+    "status": "planned",
+    "passes": false,
+    "dependencies": [],
+    "inputs": ["user_id", "items", "address_id"],
+    "outputs": ["order_id", "status", "amount"],
+    "acceptance_criteria": [
+      "Request validation is complete",
+      "Order is persisted successfully",
+      "Response shape matches the API contract",
+      "Error scenarios return standardized error codes"
+    ],
+    "test_scope": ["unit", "integration", "contract"],
+    "owner": "generator",
+    "last_eval_score": 0,
+    "notes": ""
+  },
+  {
+    "id": "FEAT-002",
+    "name": "Order creation page",
+    "module": "web",
+    "type": "web_flow",
+    "priority": "P0",
+    "status": "planned",
+    "passes": false,
+    "dependencies": ["FEAT-001"],
+    "inputs": ["form fields", "submit action"],
+    "outputs": ["order created confirmation"],
+    "acceptance_criteria": [
+      "Form validates required fields",
+      "Loading state is shown during submit",
+      "Success state confirms creation",
+      "Error state shows actionable feedback"
+    ],
+    "test_scope": ["unit", "integration", "e2e"],
+    "owner": "generator",
+    "last_eval_score": 0,
+    "notes": ""
+  }
+]

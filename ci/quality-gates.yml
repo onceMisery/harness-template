@@ -1,0 +1,5 @@
+quality_gates:
+  min_eval_score: 80
+  blocker_allowed: 0
+  require_contract_tests: true
+  require_e2e_for_web_flows: true

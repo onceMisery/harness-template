@@ -1,0 +1,27 @@
+{
+  "total_sprints": 2,
+  "current_sprint": 1,
+  "sprints": [
+    {
+      "sprint_no": 1,
+      "goal": "Deliver backend order creation and web submit flow",
+      "feature_ids": ["FEAT-001", "FEAT-002"],
+      "depends_on": [],
+      "exit_criteria": [
+        "Included features reach evaluator score >= 80",
+        "No blocker remains",
+        "All relevant contract and E2E tests pass"
+      ]
+    },
+    {
+      "sprint_no": 2,
+      "goal": "Deliver order detail and confirmation improvements",
+      "feature_ids": [],
+      "depends_on": [1],
+      "exit_criteria": [
+        "Included features reach evaluator score >= 80",
+        "No blocker remains"
+      ]
+    }
+  ]
+}

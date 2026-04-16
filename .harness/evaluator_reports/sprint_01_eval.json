@@ -1,0 +1,15 @@
+{
+  "sprint_no": 1,
+  "score": 0,
+  "passed": false,
+  "blockers": [],
+  "major_issues": [],
+  "minor_issues": [],
+  "test_summary": {
+    "unit_passed": 0,
+    "integration_passed": 0,
+    "contract_passed": 0,
+    "e2e_passed": 0
+  },
+  "verdict": "TBD"
+}

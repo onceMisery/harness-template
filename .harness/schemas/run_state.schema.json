@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RunState",
+  "type": "object",
+  "required": [
+    "run_id",
+    "current_state",
+    "current_sprint",
+    "current_feature_ids",
+    "retry_count",
+    "last_score",
+    "blockers",
+    "updated_at",
+    "handoff_from",
+    "handoff_to"
+  ],
+  "properties": {
+    "run_id": {"type": "string"},
+    "current_state": {
+      "type": "string",
+      "enum": ["INIT", "PLANNING", "PLAN_READY", "GENERATING", "GENERATED", "EVALUATING", "REWORK_REQUIRED", "PASSED", "DONE", "FAILED"]
+    },
+    "current_sprint": {"type": "integer", "minimum": 1},
+    "current_feature_ids": {"type": "array", "items": {"type": "string"}},
+    "retry_count": {"type": "integer", "minimum": 0},
+    "last_score": {"type": "number", "minimum": 0, "maximum": 100},
+    "blockers": {"type": "integer", "minimum": 0},
+    "updated_at": {"type": "string"},
+    "handoff_from": {"type": "string"},
+    "handoff_to": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "2026-04-16-001",
+  "current_state": "INIT",
+  "current_sprint": 1,
+  "current_feature_ids": [],
+  "retry_count": 0,
+  "last_score": 0,
+  "blockers": 0,
+  "updated_at": "2026-04-16T10:00:00Z",
+  "handoff_from": "",
+  "handoff_to": "planner"
+}

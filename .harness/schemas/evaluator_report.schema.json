@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvaluatorReport",
+  "type": "object",
+  "required": ["sprint_no", "score", "passed", "blockers", "major_issues", "minor_issues", "test_summary", "verdict"],
+  "properties": {
+    "sprint_no": {"type": "integer", "minimum": 1},
+    "score": {"type": "number", "minimum": 0, "maximum": 100},
+    "passed": {"type": "boolean"},
+    "blockers": {"type": "array", "items": {"type": "string"}},
+    "major_issues": {"type": "array", "items": {"type": "string"}},
+    "minor_issues": {"type": "array", "items": {"type": "string"}},
+    "test_summary": {
+      "type": "object",
+      "required": ["unit_passed", "integration_passed", "contract_passed", "e2e_passed"],
+      "properties": {
+        "unit_passed": {"type": "integer", "minimum": 0},
+        "integration_passed": {"type": "integer", "minimum": 0},
+        "contract_passed": {"type": "integer", "minimum": 0},
+        "e2e_passed": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "verdict": {"type": "string", "enum": ["PASS", "REWORK_REQUIRED", "FAIL", "TBD"]}
+  },
+  "additionalProperties": true
+}

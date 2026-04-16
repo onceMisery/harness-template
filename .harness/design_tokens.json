@@ -1,0 +1,24 @@
+{
+  "theme": "default",
+  "colors": {
+    "primary": "#2563eb",
+    "danger": "#dc2626",
+    "success": "#16a34a",
+    "warning": "#d97706"
+  },
+  "typography": {
+    "font_family": "Inter",
+    "base_size": "14px"
+  },
+  "spacing": {
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24
+  },
+  "anti_patterns": [
+    "Do not hard-code colors inline",
+    "Do not hide primary error feedback",
+    "Do not mix more than three primary actions in one view"
+  ]
+}

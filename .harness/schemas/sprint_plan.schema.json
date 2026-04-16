@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SprintPlan",
+  "type": "object",
+  "required": ["total_sprints", "current_sprint", "sprints"],
+  "properties": {
+    "total_sprints": {"type": "integer", "minimum": 1},
+    "current_sprint": {"type": "integer", "minimum": 1},
+    "sprints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sprint_no", "goal", "feature_ids", "depends_on", "exit_criteria"],
+        "properties": {
+          "sprint_no": {"type": "integer", "minimum": 1},
+          "goal": {"type": "string"},
+          "feature_ids": {"type": "array", "items": {"type": "string"}},
+          "depends_on": {"type": "array", "items": {"type": "integer"}},
+          "exit_criteria": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
